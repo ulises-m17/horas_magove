@@ -7,7 +7,7 @@
  height: 50%;
  width: 50%;
  background-color: gainsboro;
-margin: 6% auto;
+margin: 3% auto;
 }
 
 .contenedor h1{
@@ -27,14 +27,77 @@ margin: 6% auto;
 }
 
 .inputs{
-    border: 5px solid red;
-    height: 200px;
+   
+    height: 100%;
     width: 50%;
-    margin: 0px auto;
+    margin: 20px auto;
     
 }
 
-formulario{
+
+
+
+.contenedor_principal{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+
+.contenedor_menu{
+    border-right: solid 3px #8a8a8a;
+    width: 100%; 
+    grid-column: 1 / 2;
+    height: 650px;
+  
+}
+
+.item{
+    
+    grid-column: 2 / 5;
+    background-color:#d1d1d1 ;
+    margin: 5px 5px;
+}
+
+.item h1{
+    margin-top: 5px;
+    text-align: center;
+    border-bottom: #8a8a8a 2px solid;
+}
+
+.logo{
     display: flex;
-    flex-direction: column;
+    margin-top: 1%;
+    justify-content: center;
+    border-bottom: #8a8a8a 2px solid;
+    height: 24%;
+   
+}
+
+.logo_magove{
+    height:  100%;
+    opacity: 0.9;
+}
+
+.nav{
+    height: 75%;
+}
+.nav-item{
+    height: 50px;
+    margin-top: 3%;
+   background: #d1d1d1;
+}
+
+.nav-link{
+    color: black;
+
+}
+
+.formulario{
+
+    margin: 25px 15px;
+
+}
+
+.tablas{
+    margin: 25px 15px ;
 }
