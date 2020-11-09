@@ -6,51 +6,34 @@
     <link rel="stylesheet" type="text/css" href="estilos/estilos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <title>Actividades de máquinas</title>
+    <title>Actividades según la máquina</title>
 </head>
 <body>
    <div class="contenedor_principal">
 
-    <div class="contenedor_menu">
-        <a href="index.html">
-        <div class="logo">
-        <img class="logo_magove" src="recursos/magove.jpg" alt="Logo MAGOVE" >
-       </div>
- </a> 
-        <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" href="proyecto.html">Proyectos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               Máquinas y Actividades
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="maquina.html">Máquina</a>
-                <a class="dropdown-item" href="actividad.html">Actividades</a>
-                <a class="dropdown-item" href="actividad_maquina.html">Actividades en máquina</a>
-              </div>
-            </li>
-          
-            <li class="nav-item">
-                <a class="nav-link" href="empleados.html">Empleados</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Registros</a>
-              </li>
-            
-             
-            
-          </ul>
-    </div>
+   <?php 
+    include 'includes/menu.php';
+    ?>
     
     <div class="item">
-      <h1>Actividades</h1>
+      <h1>Actividades según la máquina</h1>
         <form class="formulario">
-            <div class="form-row">
+            <div class="form-row ">
+              <div class="form-group col-md-3">
+                <label for="codigo">Tipo de máquina</label>
+            <select class="form-control" name="selecciona_maquina" id="seleccion_maquina">
+                <option value="1">opcion</option>
+                <option value="2">otra</option>
+                <option value="3">diferente</option>
+            </select>
+              </div>
               <div class="form-group col-md-3">
                 <label for="codigo">Tipo de actividad</label>
-                <input type="text" class="form-control" id="inputcodigo" required>
+               <select class="form-control" name="seleccion_actividad" id="seleccion_actividad">
+                   <option value="1">preimra</option>
+                   <option value="2">segunda</option>
+                   <option value="3">tercera</option>
+               </select>
               </div>
 
             </div>
@@ -63,7 +46,7 @@
               <thead>
                 <tr>
                     <th scope="col">#</th>
-                  <th scope="col">Tipo de actividad</th>
+                  <th scope="col">Actividades en máquinas</th>
                  
                
                  

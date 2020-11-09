@@ -16,11 +16,12 @@
 
     </div>
 
+   
     <div class="inputs">
-        <form>
+        <form action="ejemplo.php" method="POST">
             <div class="form-group">
               <label for="usuario">Usuario</label>
-              <input type="text" class="form-control" id="usuario" aria-describedby="ayuda_usuario" required>
+              <input type="text" class="form-control" id="usuario" name="nombre" aria-describedby="ayuda_usuario" required>
               <small id="ayuda_usuario" class="form-text text-muted">Ingrese su nombre de usuario aquí</small>
             </div>
             <div class="form-group">

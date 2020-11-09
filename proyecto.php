@@ -11,41 +11,12 @@
 <body>
    <div class="contenedor_principal">
 
-    <div class="contenedor_menu">
-      <a href="index.html">
-
-        <div class="logo">
-           <img class="logo_magove" src="recursos/magove.jpg" alt="Logo MAGOVE">
-       </div>
-</a>
-        <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" href="proyecto.html">Proyectos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               Máquinas y Actividades
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="maquina.html">Máquina</a>
-                <a class="dropdown-item" href="actividad.html">Actividades</a>
-                <a class="dropdown-item" href="actividad_maquina.html">Actividades en máquina</a>
-              </div>
-            </li>
-          
-            <li class="nav-item">
-              
-              <a class="nav-link" href="empleados.html">Empleados</a>    
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Registros</a>
-              </li>
-            
-             
-            
-          </ul>
-    </div>
     
+    <?php 
+    include 'includes/menu.php';
+     
+    ?>
+
     <div class="item">
       <h1>Proyectos</h1>
         <form class="formulario">
