@@ -18,27 +18,35 @@
     
     <div class="item">
       <h1>Empleados</h1>
-        <form class="formulario">
+        <form class="formulario" method="POST" action="registro_empleados.php">
             <div class="form-row">
               <div class="form-group col-md-3">
                 <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" id="inputNombre" required>
+                <input type="text" class="form-control" id="inputNombre" name="nombre" required>
               </div>
               
               <div class="form-group col-md-3">
                 <label for="ap1">Apellido paterno</label>
-                <input type="text" class="form-control" id="inputAp1" required>
+                <input type="text" class="form-control" id="inputAp1" name="ap1" required>
               </div>
 
 
               <div class="form-group col-md-3">
                 <label for="ap2">Apellido materno</label>
-                <input type="text" class="form-control" id="inputAp2" required>
+                <input type="text" class="form-control" id="inputAp2" name="ap2" required>
+              </div>
+
+              <div class="form-group col-md-3">
+                <label for="paswor">Contraseña</label>
+                <input type="password" class="form-control" id="inputpasword" name="paswor" required>
               </div>
 
             </div>
 
-            <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="submit" name="guardar" class="btn btn-primary">Guardar</button>
+
+                
+
           </form>
 
           <div class="tablas">
