@@ -18,7 +18,7 @@
 
    
     <div class="inputs">
-        <form action="ejemplo.php" method="POST">
+        <form action="acceso.php" method="POST">
             <div class="form-group">
               <label for="usuario">Usuario</label>
               <input type="text" class="form-control" id="usuario" name="nombre" aria-describedby="ayuda_usuario" required>
@@ -26,7 +26,7 @@
             </div>
             <div class="form-group">
               <label for="contrasenia">Contraseña</label>
-              <input type="password" class="form-control" id="contrasenia" required>
+              <input type="password" class="form-control" id="contrasenia" name="paswor" required>
             </div>
 
             <button type="submit" class="btn btn-primary">Ingresar</button>

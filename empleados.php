@@ -13,13 +13,14 @@
 
    <?php 
     include 'includes/menu.php';
-     
+    session_start();
     ?>
     
     <div class="item">
       <h1>Empleados</h1>
         <form class="formulario" method="POST" action="registro_empleados.php">
-            <div class="form-row">
+    
+         <div class="form-row">
               <div class="form-group col-md-3">
                 <label for="nombre">Nombre</label>
                 <input type="text" class="form-control" id="inputNombre" name="nombre" required>
@@ -44,9 +45,18 @@
             </div>
 
             <button type="submit" name="guardar" class="btn btn-primary">Guardar</button>
+            
+            
+            <?php if(isset($_SESSION['registrado'])): ?>
 
-                
+                <div class='alert alert-primary' role='alert'>
+                <strong>
+              <?= $_SESSION['registrado'] ?>
+              </strong>
+              </div>
 
+             <?php endif;
+              session_unset(); ?>
           </form>
 
           <div class="tablas">
