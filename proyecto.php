@@ -14,34 +14,45 @@
     
     <?php 
     include 'includes/menu.php';
+    session_start();
      
     ?>
 
     <div class="item">
       <h1>Proyectos</h1>
-        <form class="formulario">
+        <form class="formulario" method="POST" action="consultas/registro_proyectos.php">
             <div class="form-row">
               <div class="form-group col-md-3">
                 <label for="codigo">Código</label>
-                <input type="text" class="form-control" id="inputcodigo" required>
+                <input type="text" class="form-control" name="codigo"  id="inputcodigo" required>
               </div>
               
               <div class="form-group col-md-3">
                 <label for="fecha_entrega">Fecha de entrega</label>
-                <input type="date" class="form-control" id="fecha" required>
+                <input type="date" class="form-control" name="fecha_entrega" id="fecha" required>
               </div>
 
 
               <div class="form-group col-md-3">
                 <label for="presupuesto">Presupuesto de horas</label>
-                <input type="number" class="form-control" id="presupuesto"  min="1" step="0.01" >
+                <input type="number" class="form-control" name="presupuesto_horas" id="presupuesto"  min="1" step="0.01" required>
               </div>
 
             </div>
 
-
-
             <button type="submit" class="btn btn-primary">Guardar</button>
+
+            <?php  
+            if(isset($_SESSION['mensaje'])):?>
+            <div class='alert alert-primary' role='alert'>
+                <strong>
+                  <?= $_SESSION['mensaje'] ?>
+                  </strong>
+              </div>
+              <?php endif;
+              session_unset();?> 
+              
+
           </form>
 <div class="tablas">
           <table class="table table-bordered table-dark">

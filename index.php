@@ -18,7 +18,7 @@
 
    
     <div class="inputs">
-        <form action="acceso.php" method="POST">
+        <form action="consultas/acceso.php" method="POST">
             <div class="form-group">
               <label for="usuario">Usuario</label>
               <input type="text" class="form-control" id="usuario" name="nombre" aria-describedby="ayuda_usuario" required>

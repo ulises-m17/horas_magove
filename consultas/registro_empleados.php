@@ -1,7 +1,7 @@
 <?php 
 
 // incluimos el scrip de coneccio a la base de datos
- require_once 'includes/conexion.php';  
+ require_once '../includes/conexion.php';  
   
  // iniciamos una secion para poder usar variables de secion
  session_start();
@@ -26,7 +26,7 @@ if(isset($_POST)){
             $paswor_seguro=password_hash($paswor, PASSWORD_BCRYPT,['cost'=>4]);
            
             // creamos nuestra consulta para insertar datos y la guardamos en una variable
-            $consulta= "INSERT INTO empleado VALUES (null,'$nombre','$ap1','$ap2','$paswor_seguro',1,1);";
+            $consulta= "INSERT INTO empleado VALUES (null,'$nombre','$ap1','$ap2','$paswor_seguro',1);";
             
             // ejecutamos la consulta y obtenemos la coneccion a nuestra base de datos
             $guarda=mysqli_query($conect,$consulta);
@@ -35,17 +35,13 @@ if(isset($_POST)){
             if($guarda){
 
               // declaramos o asignamos un mensaje a la variable de secion 
-             $_SESSION['registrado']= "Datos guardados correctamente";
-             
-             
-           
+             $_SESSION['registrado']= "Datos guardados correctamente";        
+         
             }else{
               
               $_SESSION['registrado']= "Datos no guardados";
            
-            } 
-            
-           
+            }   
 
         }else{
           $_SESSION['registrado']= "Datos invalidos";
@@ -63,5 +59,5 @@ if(isset($_POST)){
       $_SESSION['registrado']= "Datos no recibidos";
 }
 // Al mandar llamar nuestro archivo de registro de empleados nos recargue la pagina empleados que es donde estamos 
-header("location:empleados.php");
+header("location: ../empleados.php");
 ?>

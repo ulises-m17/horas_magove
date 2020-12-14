@@ -18,7 +18,7 @@
     
     <div class="item">
       <h1>Empleados</h1>
-        <form class="formulario" method="POST" action="registro_empleados.php">
+        <form class="formulario" method="POST" action="consultas/registro_empleados.php">
     
          <div class="form-row">
               <div class="form-group col-md-3">
